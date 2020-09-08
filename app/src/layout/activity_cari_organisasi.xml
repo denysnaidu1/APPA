@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cariOrganisasi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:textSize="20dp"
+            android:text="Cari Organisasi"
+            android:textColor="@color/teks_fitur"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <SearchView
+            android:background="@color/colorPrimary"
+            android:tooltipText="Nama Panti"
+            android:id="@+id/searchview1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/recycleOrganisasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <!--<GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:columnCount="1"
+            android:rowCount="3"
+            android:stretchMode="columnWidth"
+            android:padding="5dp">
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="7dp"
+                android:onClick="goProfilOrganisasi">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/contoh1"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/nama"
+                        android:textColor="@color/teks_fitur"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18dp"
+                        android:layout_toRightOf="@+id/contoh1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Organisasi"/>
+                    <TextView
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/contoh1"
+                        android:layout_below="@id/nama"
+                        android:text="STMIK - STIE Mikroskil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/contoh2"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/nama2"
+                        android:textColor="@color/teks_fitur"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18dp"
+                        android:layout_toRightOf="@+id/contoh2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Organisasi"/>
+                    <TextView
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/contoh2"
+                        android:layout_below="@id/nama2"
+                        android:text="STMIK - STIE MIkroskil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/contoh3"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/nama3"
+                        android:textColor="@color/teks_fitur"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18dp"
+                        android:layout_toRightOf="@+id/contoh3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Organisasi"/>
+                    <TextView
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/contoh3"
+                        android:layout_below="@id/nama3"
+                        android:text="USU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+        </GridLayout>
+        -->
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

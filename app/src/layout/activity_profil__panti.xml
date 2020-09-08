@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profil_Panti"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+
+        </android.support.v4.view.ViewPager>
+
+        <Button
+
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:id="@+id/btn_profilanak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewpager"
+            android:layout_marginLeft="60dp"
+            android:text="@string/profil_anak"
+            android:textColor="#fff"
+            android:onClick="goProfilAnak"/>
+        <Button
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:text="@string/rekening"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/btn_profilanak"
+            android:id="@+id/btn_contact"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewpager"
+            android:onClick="goRekening"/>
+
+            <LinearLayout
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/btn_profilanak"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/teks_fitur"
+                android:text="Jumlah Anak          : 53 orang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/teks_fitur"
+                android:text="Tanggal Dibangun : Januari 1916"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/teks_fitur"
+                android:text="Alamat           :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/teks_fitur"
+                android:text="Jl Kom L Yos Sudarso, No. 10, Glugur Kota, Medan Barat."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/teks_fitur"
+                android:text="Contact Person   :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/handphone_round"
+                android:id="@+id/handphone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+                <TextView
+                    android:id="@+id/nohp"
+                    android:layout_toRightOf="@id/handphone"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/teks_fitur"
+                    android:text="-"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/handphone"
+                    android:layout_marginLeft="30dp"
+                    android:src="@mipmap/telephone_round"
+                    android:id="@+id/telephone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/nohp"
+                    android:id="@+id/notelephone"
+                    android:layout_toRightOf="@id/telephone"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/teks_fitur"
+                    android:text="(061) 6613840"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

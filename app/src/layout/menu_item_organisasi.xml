@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="7dp"
+    android:elevation="17dp"
+    app:cardBackgroundColor="#efb282">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/foto_organisasi"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <TextView
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:id="@+id/nama_organisasi"
+            android:textSize="20sp"
+            android:text="Nama Organisasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="#000"
+            android:id="@+id/nama_kampus"
+            android:textSize="20sp"
+            android:text="Nama Kampus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

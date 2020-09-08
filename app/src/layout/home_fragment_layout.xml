@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/gambar"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_below="@id/atas"
+            android:scaleType="fitXY"
+            android:src="@drawable/latar_header" />
+
+        <RelativeLayout
+            android:id="@+id/fitur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gambar"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp">
+
+            <GridLayout
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:rowCount="1"
+                android:rowOrderPreserved="false">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:onClick="infoPanti"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/icPanti"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/infopanti_round" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icPanti"
+                            android:layout_centerHorizontal="true"
+                            android:text="Panti"
+                            android:textColor="@color/teks_fitur" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="goPilihDonasi"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:id="@+id/icfitur2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/donasi_round" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icfitur2"
+                            android:layout_centerHorizontal="true"
+                            android:text="Donasi"
+                            android:textColor="@color/teks_fitur" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dp"
+                    android:onClick="goCariOrganisasi"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/icfitur3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@mipmap/organisasi_round" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icfitur3"
+                            android:layout_centerHorizontal="true"
+                            android:text="Organisasi"
+                            android:textColor="@color/teks_fitur" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/judulevent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/grid"
+                android:layout_marginTop="20dp"
+                android:text="Berita Kegiatan"
+                android:textColor="@color/teks_fitur"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/lineberita"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/judulevent"
+                android:background="@color/warna_latar" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/fitur"
+            android:id="@+id/recycler_Event"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!--<HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fitur"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="250dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="#FFF3E0"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/event1"
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sampel1" />
+
+                            <TextView
+                                android:id="@+id/judulEvent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/event1"
+                                android:layout_marginLeft="5dp"
+                                android:text="Kegiatan donasi Mahasiswa Mikroskil ke Panti Suka Maju"
+                                android:textColor="#000"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/judulEvent"
+                                android:layout_marginLeft="5dp"
+                                android:text="Sabtu, 15 Dec 2018"
+                                android:textColor="#000"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="250dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/card3"
+                        app:cardBackgroundColor="#FFF3E0"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/event2"
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sampel2" />
+
+                            <TextView
+                                android:id="@+id/judulEvent2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/event2"
+                                android:layout_marginLeft="5dp"
+                                android:text="Kegiatan donasi Mahasiswa Mikroskil ke Panti Suka Maju"
+                                android:textColor="#000"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/judulEvent2"
+                                android:layout_marginLeft="5dp"
+                                android:text="Sabtu, 15 Dec 2018"
+                                android:textColor="#000"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card5"
+                        android:layout_width="250dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toRightOf="@id/card4"
+                        app:cardBackgroundColor="#fdf2df"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/event3"
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sampel3" />
+
+                            <TextView
+                                android:id="@+id/judulEvent3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/event3"
+                                android:layout_marginLeft="5dp"
+                                android:text="Kegiatan donasi Mahasiswa Mikroskil ke Panti Suka Maju"
+                                android:textColor="#000"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/judulEvent3"
+                                android:layout_marginLeft="5dp"
+                                android:text="Sabtu, 15 Dec 2018"
+                                android:textColor="#000"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </HorizontalScrollView>-->
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

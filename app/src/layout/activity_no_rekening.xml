@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".noRekening">
+
+    <GridLayout
+        android:layout_margin="15dp"
+        android:rowCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rek1"
+            android:layout_rowWeight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/bca"
+                android:id="@+id/bca"
+                android:layout_width="150dp"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/norek"
+                android:textColor="@color/teks_fitur"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/bca"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="No Rekening :"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/norekbca"
+                android:textColor="@color/teks_fitur"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/bca"
+                android:layout_below="@id/norek"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="1241412312"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rek1"
+            android:id="@+id/rek2"
+            android:layout_rowWeight="1">
+
+            <ImageView
+                android:src="@drawable/mandiri"
+                android:id="@+id/mandiri"
+                android:layout_width="150dp"
+                android:layout_height="100dp" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/mandirirek"
+                android:textColor="@color/teks_fitur"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/mandiri"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="No Rekening :"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/noremandiri"
+                android:textColor="@color/teks_fitur"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/mandiri"
+                android:layout_below="@id/mandirirek"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="2242442112"/>
+        </RelativeLayout>
+        </RelativeLayout>
+    </GridLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

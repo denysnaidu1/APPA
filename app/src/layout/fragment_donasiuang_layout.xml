@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+
+
+        <TextView
+            android:gravity="center"
+            android:text="Prosedur Donasi Uang"
+            android:textColor="@color/teks_fitur"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Prosedur : "
+            android:textColor="@color/teks_fitur"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="1. Donatur mencari target panti yang ingin di donasikan "
+            android:textColor="@color/teks_fitur"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:text="2. Pada profil panti terdapat tombol Rekening, Click tombol tersebut "
+            android:layout_marginTop="5dp"
+            android:textColor="@color/teks_fitur"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:text="3. Salin no rekening panti yang tersedia "
+            android:textColor="@color/teks_fitur"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:text="4. Kembali ke tampilan awal, klik fitur Donasi"
+            android:textColor="@color/teks_fitur"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:text="5. Pada tampilan Donasi Uang, klik tombol lanjut"
+            android:textColor="@color/teks_fitur"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:text="6. Ikuti langkah - langkahnya hingga selesai dan donasi berhasil."
+            android:textColor="@color/teks_fitur"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"/>
+
+        <Button
+            android:id="@+id/btn_goUang"
+            android:background="@color/colorPrimary"
+            android:text="Lanjut"
+            android:textColor="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

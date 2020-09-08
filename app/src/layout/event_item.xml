@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#fdf2df"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gambarEvent"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/judulEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gambarEvent"
+                android:layout_marginLeft="5dp"
+                android:text="Nama Kegiatan"
+                android:textColor="#000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tanggalEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judulEvent"
+                android:layout_marginLeft="5dp"
+                android:text="Tanggal Event"
+                android:textColor="#000"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

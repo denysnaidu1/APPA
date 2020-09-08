@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfilAnak">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:textSize="20sp"
+            android:text="Profil Anak"
+            android:textColor="@color/teks_fitur"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <SearchView
+            android:background="@color/colorPrimary"
+            android:tooltipText="Nama Panti"
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"/>
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:columnCount="1"
+            android:rowCount="3"
+            android:stretchMode="columnWidth"
+            android:padding="5dp">
+
+            <android.support.v7.widget.CardView
+                app:cardElevation="5dp"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="7dp"
+                android:onClick="goDataAnak">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/contoh1"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/nama"
+                        android:textColor="@color/teks_fitur"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18dp"
+                        android:layout_toRightOf="@+id/contoh1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ratna Sarum"/>
+                    <TextView
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/contoh1"
+                        android:layout_below="@id/nama"
+                        android:text="Perempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/contoh2"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/nama2"
+                        android:textColor="@color/teks_fitur"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="18dp"
+                        android:layout_toRightOf="@+id/contoh2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Anak"/>
+                    <TextView
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/contoh2"
+                        android:layout_below="@id/nama2"
+                        android:text="Jenis Kelamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_margin="5dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_columnWeight="1">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/contoh3"
+                        android:src="@mipmap/ic_launcher_round"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/nama3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/contoh3"
+                        android:text="Nama Anak"
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:textColor="@color/teks_fitur"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/contoh3"
+                        android:layout_below="@id/nama3"
+                        android:text="Jenis Kelamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
